@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            direction: ltr;
+        }
+
+        header {
+            background: #4a4a4a;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            background: #1e90ff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        form button:hover {
+            background: #4682b4;
+        }
+
+        footer {
+            background: #4a4a4a;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        #comments, .post_meta, #blog-pager { display: none; }
+        #ContactForm1_contact-form-name, #ContactForm1_contact-form-email {
+            width: 100%;
+            height: auto;
+            margin: 5px auto;
+            padding: 10px;
+            background: #fff;
+            color: #444;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            transition: all 0.5s ease-out;
+        }
+
+        #ContactForm1_contact-form-email-message {
+            width: 100%;
+            height: 175px;
+            margin: 5px 0;
+            padding: 10px;
+            background: #fff;
+            color: #444;
+            font-family: 'Open Sans', sans-serif;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            transition: all 0.5s ease-out;
+        }
+
+        #ContactForm1_contact-form-name:focus, #ContactForm1_contact-form-email:focus, #ContactForm1_contact-form-email-message:focus {
+            outline: none;
+            background: #fff;
+            color: #444;
+            border-color: rgba(81,203,238,1);
+            box-shadow: 0 0 5px rgba(81,203,238,0.7);
+        }
+
+        #ContactForm1_contact-form-submit {
+            width: 100%;
+            font-family: 'Open Sans';
+            float: left;
+            background: #fff;
+            color: #aaa;
+            margin: 10px auto;
+            vertical-align: middle;
+            cursor: pointer;
+            padding: 10px 18px !important;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 3px;
+            background-image: linear-gradient(110deg, #827153 0%, #827153 50%, transparent 50%, transparent 100%);
+            background-size: 200%;
+            background-position: 120% 0;
+            background-repeat: no-repeat;
+            border: 1px solid #ddd;
+            transition: all .8s ease, background-position .8s ease, color .8s ease;
+        }
+
+        #ContactForm1_contact-form-submit:hover {
+            color: #fff;
+            background-position: 0 0;
+            border-color: #7986cb;
+        }
+
+        #ContactForm1_contact-form-error-message, #ContactForm1_contact-form-success-message {
+            width: 100%;
+            margin-top: 35px;
+        }
+
+        .contact-form-error-message-with-border {
+            background: #f36c60;
+            border: none;
+            box-shadow: none;
+            color: #fff;
+            padding: 5px 0;
+        }
+
+        .contact-form-success-message {
+            background: #4fc3f7;
+            border: none;
+            box-shadow: none;
+            color: #fff;
+        }
+
+        img.contact-form-cross {
+            line-height: 40px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teacher Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="en.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.en.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <form name="contact-form">
+                <span style="color: #827153; font-family: Open Sans,Arial,Helvetica,sans-serif; font-weight: 700;"><i class="fa fa-user"></i> Name </span>
+                <input id="ContactForm1_contact-form-name" name="name" size="30" type="text" value="" />  
+
+                <span style="color: #827153; font-family: Open Sans,Arial,Helvetica,sans-serif; font-weight: 700;"><i class="fa fa-envelope"></i> Email <span style="color: #f56954; font-size: x-small; font-weight: bold;">Required</span></span> 
+                <input id="ContactForm1_contact-form-email" name="email" size="30" type="text" value="" />  
+
+                <span style="color: #827153; font-family: Open Sans,Arial,Helvetica,sans-serif; font-weight: 700;"><i class="fa fa-pencil-square-o"></i> Message <span style="color: #f56954; font-size: x-small; font-weight: bold;">Required</span></span>
+                <textarea cols="25" id="ContactForm1_contact-form-email-message" name="email-message" rows="5"></textarea> 
+                <input id="ContactForm1_contact-form-submit" type="button" value="Submit" />  
+                <div style="max-width: 222px; text-align: center; width: 100%;">
+                    <div id="ContactForm1_contact-form-error-message">
+                    </div>
+                    <div id="ContactForm1_contact-form-success-message">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

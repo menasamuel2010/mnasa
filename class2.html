@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصف الثاني الإعدادي</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            direction: rtl;
+        }
+
+        header {
+            background: #4a4a4a;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .video-section, .whatsapp-section {
+            margin-bottom: 2rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .whatsapp-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .whatsapp-section ul li {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s, border 0.3s;
+        }
+
+        .whatsapp-section ul li:hover {
+            background: #f1f1f1;
+            border-color: #1e90ff;
+        }
+
+        .whatsapp-section ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            display: block;
+        }
+
+        .whatsapp-section ul li a:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>الصف الثاني الإعدادي</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="#">حول</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="video-section">
+            <h2>فيديوهات تعليمية</h2>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section class="whatsapp-section">
+            <h2>مجموعات واتساب</h2>
+            <ul>
+                <li><a href="https://chat.whatsapp.com/GROUP_LINK_1">مجموعة واتساب 1</a></li>
+                <li><a href="https://chat.whatsapp.com/GROUP_LINK_2">مجموعة واتساب 2</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

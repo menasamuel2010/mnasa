@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<li><a href="ar.html">ar</a></li>
+<li><a href="en.html">en</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Platform</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            direction: ltr;
+        }
+
+        header {
+            background: #4a4a4a;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            background: #1e90ff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        form button:hover {
+            background: #4682b4;
+        }
+
+        footer {
+            background: #4a4a4a;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+            position: relative;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .welcome-message {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .responsive-img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .class-sections h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #1e90ff;
+        }
+
+        .class-sections ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .class-sections ul li {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s, border 0.3s;
+        }
+
+        .class-sections ul li:hover {
+            background: #f1f1f1;
+            border-color: #1e90ff;
+        }
+
+        .class-sections ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            display: block;
+        }
+
+        .class-sections ul li a:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teacher Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.en.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="homepage" class="hidden">
+            <div class="welcome-message">Welcome, <span id="display-username"></span></div>
+            <img src="placeholder.jpg" alt="Image" class="responsive-img">
+            <div class="class-sections">
+                <h3>Preparatory Classes:</h3>
+                <ul>
+                    <li><a href="class1.en.html">First Preparatory</a></li>
+                    <li><a href="class2.en.html">Second Preparatory</a></li>
+                    <li><a href="class3.en.html">Third Preparatory</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Teacher Platform. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Store login data in the cloud (this is just a simulation)
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            // Show the homepage
+            document.getElementById('login').classList.add('hidden');
+            document.getElementById('homepage').classList.remove('hidden');
+
+            // Display the username
+            const displayName = username.split('@')[0];
+            document.getElementById('display-username').textContent = displayName;
+        });
+
+        // Check if the user is already logged in
+        window.onload = function() {
+            const savedUsername = localStorage.getItem('username');
+            if (savedUsername) {
+                document.getElementById('login').classList.add('hidden');
+                document.getElementById('homepage').classList.remove('hidden');
+                document.getElementById('display-username').textContent = savedUsername.split('@')[0];
+            }
+        }
+    </script>
+</body>
+</html>
